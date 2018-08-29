@@ -1,0 +1,5 @@
+<apex:page standardController="Account">
+    <apex:repeat value="{!$ObjectType.Account.FieldSets.myFieldSetName}" var="field">
+        <apex:outputText value="{!$Api.Session_ID}" />
+    </apex:repeat>
+</apex:page>

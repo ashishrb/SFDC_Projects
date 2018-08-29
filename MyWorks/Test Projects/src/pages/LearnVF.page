@@ -1,0 +1,23 @@
+<apex:page StandardController="Account">
+	<apex:pageBlock >
+	    <apex:form id="changeStatusForm">
+	        <apex:pageBlock >
+	        <apex:pageMessages />
+		        <apex:pageBlockButtons >
+		            <apex:commandButton value="Save" action="{!save}"/>
+		        </apex:pageBlockButtons>
+		        <apex:pageBlockTable value="{!Account}" var="c">
+		            <apex:column value="{!c.Name}"/>
+		            <apex:column value="{!c.Industry}"/>
+		            <apex:column value="{!c.AccountNumber}"/>
+		            <apex:column value="{!c.Active__c}"/>
+		        </apex:pageBlockTable>
+	        </apex:pageBlock>
+    	</apex:form>
+		<apex:pageBlockSection title="Informations">
+			{!$CurrentPage.parameters.Name}
+			{!$CurrentPage.parameters.Age}
+			{!Account.Name}
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+</apex:page>
